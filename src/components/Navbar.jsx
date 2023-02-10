@@ -3,14 +3,23 @@ import logo from "../assets/my-logo.png";
 import img from "../assets/38921.jpg";
 import Link from "./Link";
 import useMediaQuery from "../hooks/useMediaQuery";
+import { motion } from "framer-motion";
+import menuIcon from "../assets/menuIcon.svg";
 
 const Navbar = (props) => {
-  const isAboveSmallScreens = useMediaQuery("(min-width: 700px)");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [toggle, setToggle] = useState(false);
+  const toggle1 = toggle ? "open" : "";
+
+  const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
 
   const navAnimation = props.heightFromTopIsZero
-    ? "bg-blackTransparent border-b border-solid border-graysh h-[150px] "
-    : "bg-grayshish h-[100px]";
-  const logoAnimation = props.heightFromTopIsZero ? "w-[25em]  " : "w-[20em] ";
+    ? "bg-graybg border-b border-solid border-green sm:h-[120px] h-[100px]"
+    : "h-[100px]";
+  const logoAnimation = props.heightFromTopIsZero
+    ? "sm:w-[25em] xs:w-[10em]"
+    : "xs:w-[10em] ";
   console.log(navAnimation, "navanimation");
 
   return (
@@ -23,7 +32,7 @@ const Navbar = (props) => {
           <img
             src={logo}
             alt=""
-            class={`transition-all duration-[600ms] duration-[600ms] hover:pb-[2em] cursor-pointer ${logoAnimation}`}
+            class={`w-[10em] transition-all duration-[600ms] duration-[600ms] hover:pb-[2em] cursor-pointer ${logoAnimation}`}
           />
         </div>
         {isAboveSmallScreens ? (
@@ -53,7 +62,14 @@ const Navbar = (props) => {
             />
           </div>
         ) : (
-          <div></div>
+          <div>
+            <img
+              src={menuIcon}
+              alt=""
+              className="w-[3em]"
+              onClick={() => setIsOpen((isOpen) => !isOpen)}
+            />
+          </div>
         )}
       </div>
     </nav>
