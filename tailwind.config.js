@@ -28,6 +28,7 @@ module.exports = {
         blackLessTransparent: "rgba(0, 0, 0, 0.1)",
         green: "#00ffc8",
         white: "#fff",
+        black: "#000000",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
@@ -95,6 +96,38 @@ module.exports = {
             width: "5em",
           },
         },
+        navBarOpen: {
+          "0%": {
+            left: "100%",
+          },
+          "100%": {
+            left: "60%",
+          },
+        },
+        navBarClose: {
+          "0%": {
+            left: "60%",
+          },
+          "100%": {
+            left: "100%",
+          },
+        },
+        navBarOpenForMob: {
+          "0%": {
+            left: "100%",
+          },
+          "100%": {
+            left: "20%",
+          },
+        },
+        navBarCloseForMob: {
+          "0%": {
+            left: "20%",
+          },
+          "100%": {
+            left: "100%",
+          },
+        },
       },
       animation: {
         BlinkCursor: "BlinkCursor 0.8s steps(3) infinite",
@@ -103,6 +136,13 @@ module.exports = {
         typingForMdScreen: "typingForMdScreen 8s steps(22) forwards",
         headerAppears: "headerAppears 2s ease 2.5s forwards",
         arrowBounce: "arrowBounce 2s ease infinite",
+        navBarClose: "navBarClose 0.5s ease forwards",
+        navBarCloseForMob: "navBarCloseForMob 0.5s ease forwards",
+        navBarOpen: "navBarOpen 0.5s ease forwards",
+        navBarOpenForMob: "navBarOpenForMob 0.5s ease forwards",
+      },
+      boxShadow: {
+        "3xl": "0 1px 4px rgb(146 161 176 / 15%)",
       },
     },
   },

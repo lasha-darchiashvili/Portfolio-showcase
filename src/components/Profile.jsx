@@ -39,11 +39,11 @@ const Profile = () => {
               if duty calls.
             </p>
             <div className="text-[2.4em] mob:text-[1.6em] flex w-fit mt-[1em]">
-              <AnchorLink className="text-graybg cursor-pointer flex justify-center items-center bg-gradient-blue rounded-l-lg px-[0.6em] font-semibold py-[0.1em] text-center">
+              <AnchorLink className="text-graybg hover:text-white cursor-pointer flex justify-center items-center bg-gradient-blue rounded-l-lg px-[0.6em] font-semibold py-[0.1em] text-center">
                 Contact Me
               </AnchorLink>
               <AnchorLink className="bg-gradient-blue rounded-r-lg py-[0.1em] px-[0.1em] flex justify-center items-center cursor-pointer">
-                <p className="bg-graybg px-[0.6em] py-[0.1em] text-center flex justify-center items-center rounded-lg">
+                <p className="bg-graybg hover:text-green px-[0.6em] py-[0.1em] text-center flex justify-center items-center rounded-lg">
                   Let's talk
                 </p>
               </AnchorLink>

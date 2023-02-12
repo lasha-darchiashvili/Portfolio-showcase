@@ -5,12 +5,12 @@ import Link from "./Link";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import menuIcon from "../assets/menuIcon.svg";
+import ReactDOM from "react-dom";
+
+import NavMenu from "./NavMenu";
 
 const Navbar = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const [toggle, setToggle] = useState(false);
-  const toggle1 = toggle ? "open" : "";
+  const [navMenuIsOn, setNavMenuIsOn] = useState(null);
 
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
 
@@ -22,6 +22,13 @@ const Navbar = (props) => {
     : "xs:w-[10em] ";
   console.log(navAnimation, "navanimation");
 
+  const [navCloseAnimationOn, setNavCloseAnimationOn] = useState(false);
+
+  const onNavOpen = () => {
+    setNavMenuIsOn((prev) => !prev);
+    setNavCloseAnimationOn(true);
+  };
+
   return (
     <nav
       class={`transition-all duration-[600ms] w-full flex justify-center sticky top-0 text-green ${navAnimation}`}
@@ -29,11 +36,13 @@ const Navbar = (props) => {
     >
       <div class="flex justify-between items-center w-5/6 ">
         <div>
-          <img
-            src={logo}
-            alt=""
-            class={`w-[10em] transition-all duration-[600ms] duration-[600ms] hover:pb-[2em] cursor-pointer ${logoAnimation}`}
-          />
+          <a href="#">
+            <img
+              src={logo}
+              alt=""
+              class={`w-[10em] transition-all duration-[600ms] duration-[600ms] hover:pb-[2em] cursor-pointer ${logoAnimation}`}
+            />
+          </a>
         </div>
         {isAboveSmallScreens ? (
           <div className="flex gap-[3em] text-[1.6em] font-semibold">
@@ -63,15 +72,26 @@ const Navbar = (props) => {
           </div>
         ) : (
           <div>
-            <img
-              src={menuIcon}
-              alt=""
-              className="w-[3em]"
-              onClick={() => setIsOpen((isOpen) => !isOpen)}
-            />
+            <div class="absolute right-[1em] top-[3em]">
+              <img
+                src={menuIcon}
+                alt=""
+                className="w-[4em] z-50"
+                onClick={onNavOpen}
+              />
+            </div>
           </div>
         )}
       </div>
+      {!isAboveSmallScreens && (
+        <NavMenu
+          navMenuIsOn={navMenuIsOn}
+          setNavMenuIsOn={setNavMenuIsOn}
+          navCloseAnimationOn={navCloseAnimationOn}
+          selectedPage={props.selectedPage}
+          setSelectedPage={props.setSelectedPage}
+        />
+      )}
     </nav>
   );
 };
