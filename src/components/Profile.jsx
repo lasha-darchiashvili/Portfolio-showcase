@@ -6,8 +6,6 @@ import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Profile = () => {
-  const isAboveSmallScreens = useMediaQuery("(min-width: 1060px)");
-
   return (
     <section className="flex justify-center items-center md:pt-[6em] sm:pt-[15em] xs:pt-[10em] mob:pt-[10em]">
       <div className="text-white md:h-screen md:flex md:justify-center md:items-center  md:gap-[10em] font-poppins w-5/6">
@@ -42,10 +40,16 @@ const Profile = () => {
               className="text-[2.4em] mob:text-[1.6em] flex w-fit mt-[1em]"
               id="talk"
             >
-              <AnchorLink className="text-graybg hover:text-white cursor-pointer flex justify-center items-center bg-gradient-blue rounded-l-lg px-[0.6em] font-semibold py-[0.1em] text-center">
+              <AnchorLink
+                href="#contact"
+                className="text-graybg hover:text-white cursor-pointer flex justify-center items-center bg-gradient-blue rounded-l-lg px-[0.6em] font-semibold py-[0.1em] text-center"
+              >
                 Contact Me
               </AnchorLink>
-              <AnchorLink className="bg-gradient-blue rounded-r-lg py-[0.1em] px-[0.1em] flex justify-center items-center cursor-pointer">
+              <AnchorLink
+                href="#contact"
+                className="bg-gradient-blue rounded-r-lg py-[0.1em] px-[0.1em] flex justify-center items-center cursor-pointer"
+              >
                 <p className="bg-graybg hover:text-green px-[0.6em] py-[0.1em] text-center flex justify-center items-center rounded-lg">
                   Let's talk
                 </p>

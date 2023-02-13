@@ -5,11 +5,7 @@ import Navbar from "./Navbar";
 const About = (props) => {
   return (
     <div className="bg-graybg md:h-screen" id="about">
-      <Navbar
-        heightFromTopIsZero={props.heightFromTopIsZero}
-        selectedPage={props.selectedPage}
-        setSelectedPage={props.setSelectedPage}
-      />
+      <Navbar heightFromTopIsZero={props.heightFromTopIsZero} />
       <Profile />
     </div>
   );

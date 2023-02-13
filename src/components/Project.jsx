@@ -1,7 +1,6 @@
 import React from "react";
 import gitlogo from "../assets/gitlogo2.svg";
 import linkbtn from "../assets/linkbtn.svg";
-import portfolioProjectImg from "../assets/portfolioProject.png";
 import { motion } from "framer-motion";
 
 const Project = ({
@@ -13,7 +12,6 @@ const Project = ({
   projectLinks,
   imgOrder,
 }) => {
-  console.log(projectImg, "sd");
   return (
     <motion.div
       initial="hidden"
@@ -27,11 +25,15 @@ const Project = ({
     >
       <div className="flex">
         <div
-          className={`w-[50em] hidden md:block ${
+          className={`w-[50em] hidden md:block overflow-hidden ${
             imgOrder === 2 ? "order-1" : ""
           }`}
         >
-          <img src={projectImg} alt="" className="w-[50em]" />
+          <img
+            src={projectImg}
+            alt=""
+            className="w-[50em] hover:scale-[1.1] transition-all duration-[1000] ease-in"
+          />
         </div>
         <div className="bg-graybgDarker w-[50em] md:h-auto h-[27.2em] shadow-4xl xs:w-[47em] mob:w-[80vw]">
           <div
@@ -66,7 +68,7 @@ const Project = ({
           >
             <div className="flex gap-[1.2em]">
               {projectSkills.map((skill, index) => (
-                <p>{skill}</p>
+                <p key={index}>{skill}</p>
               ))}
             </div>
             <div className="flex gap-[1em] ">

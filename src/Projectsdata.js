@@ -2,7 +2,7 @@ import moviesProjectImg from "./assets/moviesProject.jpg";
 import registrationProjectImg from "./assets/registrationProject.jpg";
 import registrationProjectImg2 from "./assets/registrationProject2.jpg";
 import toDoListProjectImg from "./assets/toDoListProject.jpg";
-import portfolioProjectImg from "./assets/portfolioProject.png";
+import portfolioProjectImg from "./assets/portfolioProject.PNG";
 
 import MoviesText from "./components/ProjectTexts.jsx/MoviesText";
 import RegistrationText from "./components/ProjectTexts.jsx/RegistrationText";

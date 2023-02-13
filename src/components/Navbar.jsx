@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/my-logo.png";
-import img from "../assets/38921.jpg";
 import Link from "./Link";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { motion } from "framer-motion";
 import menuIcon from "../assets/menuIcon.svg";
-import ReactDOM from "react-dom";
-
 import NavMenu from "./NavMenu";
 
 const Navbar = (props) => {
@@ -20,7 +16,6 @@ const Navbar = (props) => {
   const logoAnimation = props.heightFromTopIsZero
     ? "sm:w-[15em] xs:w-[10em]"
     : "xs:w-[10em] ";
-  console.log(navAnimation, "navanimation");
 
   const [navCloseAnimationOn, setNavCloseAnimationOn] = useState(false);
 
@@ -31,52 +26,36 @@ const Navbar = (props) => {
 
   return (
     <nav
-      class={`w-full flex justify-center top-0 fixed ${
+      className={`w-full flex justify-center top-0 fixed ${
         props.heightFromTopIsZero
           ? "visible transition-all duration-[500ms]"
           : "invisible"
       } text-green z-50 ${navAnimation}`}
       id="home"
     >
-      <div class="flex justify-between items-center w-5/6 ">
+      <div className="flex justify-between items-center w-5/6 ">
         <div>
           <a href="#">
             <img
               src={logo}
               alt=""
-              class={`w-[10em] hover:pb-[2em] cursor-pointer ${logoAnimation}`}
+              className={`w-[10em] hover:pb-[2em] cursor-pointer ${logoAnimation}`}
             />
           </a>
         </div>
         {isAboveSmallScreens ? (
           <div className="flex gap-[3em] text-[1.6em] font-semibold">
-            <Link
-              page="ABOUT"
-              selectedPage={props.selectedPage}
-              setSelectedPage={props.setSelectedPage}
-            />
+            <Link page="ABOUT" />
 
-            <Link
-              page="SKILLS"
-              selectedPage={props.selectedPage}
-              setSelectedPage={props.setSelectedPage}
-            />
+            <Link page="SKILLS" />
 
-            <Link
-              page="PORTFOLIO"
-              selectedPage={props.selectedPage}
-              setSelectedPage={props.setSelectedPage}
-            />
+            <Link page="PORTFOLIO" />
 
-            <Link
-              page="CONTACT"
-              selectedPage={props.selectedPage}
-              setSelectedPage={props.setSelectedPage}
-            />
+            <Link page="CONTACT" />
           </div>
         ) : (
           <div>
-            <div class="absolute right-[1em] top-[2em]">
+            <div className="absolute right-[1em] top-[2em]">
               <img
                 src={menuIcon}
                 alt=""
@@ -92,8 +71,6 @@ const Navbar = (props) => {
           navMenuIsOn={navMenuIsOn}
           setNavMenuIsOn={setNavMenuIsOn}
           navCloseAnimationOn={navCloseAnimationOn}
-          selectedPage={props.selectedPage}
-          setSelectedPage={props.setSelectedPage}
         />
       )}
     </nav>

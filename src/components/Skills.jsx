@@ -7,19 +7,6 @@ import { motion } from "framer-motion";
 import sassIcon from "../assets/sassfinal.png";
 
 const Skills = () => {
-  const variants = {
-    hidden: {
-      x: "-100vw",
-    },
-    visible: {
-      x: 0,
-    },
-  };
-
-  const transition = {
-    duration: 0.5,
-    ease: "easeInOut",
-  };
   return (
     <section
       id="skills"

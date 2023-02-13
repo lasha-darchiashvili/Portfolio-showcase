@@ -8,14 +8,8 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 const App = () => {
-  const [selectedPage, setSelectedPage] = useState("home");
-
-  const idAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  console.log(idAboveMediumScreens);
-
   const [heightFromTopIsZero, setHeightFromTopIsZero] = useState(false);
 
-  console.log(heightFromTopIsZero, "asd");
   useEffect(() => {
     const listener = () => {
       if (window.scrollY >= window.innerHeight - 5) {
@@ -33,11 +27,7 @@ const App = () => {
   return (
     <div className="roboto bg-graybg z-10 ">
       <Landing />
-      <About
-        heightFromTopIsZero={heightFromTopIsZero}
-        selectedPage={selectedPage}
-        setSelectedPage={setSelectedPage}
-      />
+      <About heightFromTopIsZero={heightFromTopIsZero} />
       <Skills />
       <Projects />
       <Contact />

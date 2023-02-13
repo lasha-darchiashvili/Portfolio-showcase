@@ -18,6 +18,7 @@ const Projects = () => {
       <div className="flex flex-col gap-[5em] md:gap-[10em]">
         {projectsData.map((project, index) => (
           <Project
+            key={index}
             projectHeader={project.header}
             projectname={project.name}
             projectDescription={project.description}

@@ -1,6 +1,5 @@
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import image1 from "../assets/167479.webp";
 import arrow from "../assets/arrow.svg";
 
 const Landing = () => {

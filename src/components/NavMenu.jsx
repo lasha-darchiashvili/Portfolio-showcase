@@ -24,29 +24,13 @@ const NavMenu = (props) => {
           />
         </div>
         <div className="flex gap-[1em] text-[1.6em] font-semibold text-green flex-col mt-[2em] ml-[3em]">
-          <Link
-            page="ABOUT"
-            selectedPage={props.selectedPage}
-            setSelectedPage={props.setSelectedPage}
-          />
+          <Link page="ABOUT" />
 
-          <Link
-            page="SKILLS"
-            selectedPage={props.selectedPage}
-            setSelectedPage={props.setSelectedPage}
-          />
+          <Link page="SKILLS" />
 
-          <Link
-            page="PORTFOLIO"
-            selectedPage={props.selectedPage}
-            setSelectedPage={props.setSelectedPage}
-          />
+          <Link page="PORTFOLIO" />
 
-          <Link
-            page="CONTACT"
-            selectedPage={props.selectedPage}
-            setSelectedPage={props.setSelectedPage}
-          />
+          <Link page="CONTACT" />
         </div>
       </nav>
     </div>,
