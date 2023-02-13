@@ -15,8 +15,8 @@ const Navbar = (props) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
 
   const navAnimation = props.heightFromTopIsZero
-    ? "bg-graybg border-b border-solid border-green sm:h-[120px] h-[100px] "
-    : "h-[100px]";
+    ? "bg-graybg border-b border-solid border-green sm:h-[100px] h-[80px] "
+    : "h-[80px]";
   const logoAnimation = props.heightFromTopIsZero
     ? "sm:w-[15em] xs:w-[10em]"
     : "xs:w-[10em] ";
@@ -76,7 +76,7 @@ const Navbar = (props) => {
           </div>
         ) : (
           <div>
-            <div class="absolute right-[1em] top-[3em]">
+            <div class="absolute right-[1em] top-[2em]">
               <img
                 src={menuIcon}
                 alt=""

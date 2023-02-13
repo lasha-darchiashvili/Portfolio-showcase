@@ -5,6 +5,7 @@ import useMediaQuery from "./hooks/useMediaQuery";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -17,11 +18,10 @@ const App = () => {
   console.log(heightFromTopIsZero, "asd");
   useEffect(() => {
     const listener = () => {
-      console.log(window.scrollY + 250, "ss");
-      if (window.scrollY >= window.innerHeight) {
+      if (window.scrollY >= window.innerHeight - 5) {
         setHeightFromTopIsZero(true);
       }
-      if (window.scrollY < window.innerHeight) {
+      if (window.scrollY < window.innerHeight - 5) {
         setHeightFromTopIsZero(false);
       }
       console.log(window.scrollY, window.innerHeight);
@@ -40,6 +40,7 @@ const App = () => {
       />
       <Skills />
       <Projects />
+      <Contact />
     </div>
   );
 };

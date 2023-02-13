@@ -5,9 +5,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-      className={`${
-        selectedPage === lowerCasePage ? "border-b border-green" : ""
-      } hover:border-b hover:border-green cursor-pointer`}
+      className="cursor-pointer"
       onClick={() => setSelectedPage(lowerCasePage)}
       href={`#${lowerCasePage}`}
     >

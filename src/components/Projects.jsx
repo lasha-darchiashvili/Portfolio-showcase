@@ -6,9 +6,9 @@ const Projects = () => {
   return (
     <div
       id="portfolio"
-      className=" md:pt-[15em] sm:pt-[15em] xs:pt-[10em] mob:pt-[11em] xs:pt-[6em] mob:pt-[3em] flex flex-col items-center font-poppins"
+      className=" md:pt-[15em] sm:pt-[15em] xs:pt-[10em] mob:pt-[11em] xs:pt-[6em] mob:pt-[3em] flex flex-col items-center font-poppins md:pb-[20em] mob:pb-[8em] xs:pb-[10em] "
     >
-      <div className="flex flex-col items-center md:mb-[10em] xs:mb-[6em] mob:mb-[3em]">
+      <div className="flex flex-col items-center md:mb-[6em] xs:mb-[6em] mob:mb-[3em]">
         <p className="font-semibold text-[3.6em] mob:text-[2.4em] text-green ">
           Projects
         </p>

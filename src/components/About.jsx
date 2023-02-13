@@ -4,8 +4,7 @@ import Navbar from "./Navbar";
 
 const About = (props) => {
   return (
-    <div className="bg-graybg md:h-screen scroll-pt-[300px]" id="about">
-      <div className="invisible h-[5px]"></div>
+    <div className="bg-graybg md:h-screen" id="about">
       <Navbar
         heightFromTopIsZero={props.heightFromTopIsZero}
         selectedPage={props.selectedPage}

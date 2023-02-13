@@ -15,7 +15,7 @@ const NavMenu = (props) => {
   return ReactDOM.createPortal(
     <div className={navBarStyles}>
       <nav>
-        <div className="flex justify-end mr-[1em] mt-[3em]">
+        <div className="flex justify-end mr-[1em] mt-[2em]">
           <img
             src={menuIcon}
             alt=""
