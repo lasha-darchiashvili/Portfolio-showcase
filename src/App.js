@@ -18,7 +18,6 @@ const App = () => {
       if (window.scrollY < window.innerHeight - 5) {
         setHeightFromTopIsZero(false);
       }
-      console.log(window.scrollY, window.innerHeight);
     };
     window.addEventListener("scroll", listener);
     return () => window.removeEventListener("scroll", listener);
