@@ -8,7 +8,7 @@ const NavMenu = (props) => {
     props.navCloseAnimationOn
       ? "animate-navBarClose mob:animate-navBarCloseForMob"
       : ""
-  } fixed top-0 right-0 bottom-0 left-[100%] bg-black ${
+  } fixed top-0 right-0 bottom-0 left-[100%] bg-black z-50 ${
     props.navMenuIsOn ? "animate-navBarOpen mob:animate-navBarOpenForMob" : ""
   }`;
 
@@ -25,7 +25,7 @@ const NavMenu = (props) => {
         </div>
         <div className="flex gap-[1em] text-[1.6em] font-semibold text-green flex-col mt-[2em] ml-[3em]">
           <Link
-            page="HOME"
+            page="ABOUT"
             selectedPage={props.selectedPage}
             setSelectedPage={props.setSelectedPage}
           />

@@ -19,7 +19,7 @@ const Landing = () => {
           </p>
         </div>
       </div>
-      <AnchorLink href="#home">
+      <AnchorLink href="#about">
         <img
           src={arrow}
           className="animate-arrowBounce absolute bottom-[2em] left-[50%] translate-x-[-50%]"

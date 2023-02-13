@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Landing from "./components/Landing";
 import useMediaQuery from "./hooks/useMediaQuery";
-import img from "./assets/38921.jpg";
+
 import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -29,16 +31,15 @@ const App = () => {
   }, []);
 
   return (
-    <div className="roboto bg-graybg z-10">
+    <div className="roboto bg-graybg z-10 ">
       <Landing />
       <About
         heightFromTopIsZero={heightFromTopIsZero}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="h-[1500px] bg-graybg text-green">
-        zddddddddddddddddddddddddddddddddddddd
-      </div>
+      <Skills />
+      <Projects />
     </div>
   );
 };

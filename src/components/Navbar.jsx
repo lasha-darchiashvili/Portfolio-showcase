@@ -15,10 +15,10 @@ const Navbar = (props) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
 
   const navAnimation = props.heightFromTopIsZero
-    ? "bg-graybg border-b border-solid border-green sm:h-[120px] h-[100px]"
+    ? "bg-graybg border-b border-solid border-green sm:h-[120px] h-[100px] "
     : "h-[100px]";
   const logoAnimation = props.heightFromTopIsZero
-    ? "sm:w-[25em] xs:w-[10em]"
+    ? "sm:w-[15em] xs:w-[10em]"
     : "xs:w-[10em] ";
   console.log(navAnimation, "navanimation");
 
@@ -31,7 +31,11 @@ const Navbar = (props) => {
 
   return (
     <nav
-      class={`transition-all duration-[600ms] w-full flex justify-center sticky top-0 text-green ${navAnimation}`}
+      class={`w-full flex justify-center top-0 fixed ${
+        props.heightFromTopIsZero
+          ? "visible transition-all duration-[500ms]"
+          : "invisible"
+      } text-green z-50 ${navAnimation}`}
       id="home"
     >
       <div class="flex justify-between items-center w-5/6 ">
@@ -40,14 +44,14 @@ const Navbar = (props) => {
             <img
               src={logo}
               alt=""
-              class={`w-[10em] transition-all duration-[600ms] duration-[600ms] hover:pb-[2em] cursor-pointer ${logoAnimation}`}
+              class={`w-[10em] hover:pb-[2em] cursor-pointer ${logoAnimation}`}
             />
           </a>
         </div>
         {isAboveSmallScreens ? (
           <div className="flex gap-[3em] text-[1.6em] font-semibold">
             <Link
-              page="HOME"
+              page="ABOUT"
               selectedPage={props.selectedPage}
               setSelectedPage={props.setSelectedPage}
             />

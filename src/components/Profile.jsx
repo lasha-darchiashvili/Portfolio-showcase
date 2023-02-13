@@ -9,9 +9,9 @@ const Profile = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
-    <section className="flex justify-center items-center">
+    <section className="flex justify-center items-center md:pt-[6em] sm:pt-[15em] xs:pt-[10em] mob:pt-[10em]">
       <div className="text-white md:h-screen md:flex md:justify-center md:items-center  md:gap-[10em] font-poppins w-5/6">
-        <div className="sm:w-[50em] mob:w-[80vw] order-1 mx-auto xs:mb-[4em] xs:mt-[3em] mob:mt-[2em]">
+        <div className="sm:w-[50em] mob:w-[80vw] order-1 mx-auto md:mx-0 xs:mb-[4em] xs:mt-[3em] mob:mt-[2em]">
           <img src={profileImg} alt="" className="sm:w-[50em] mob:w-[80vw]" />
         </div>
 
@@ -38,7 +38,10 @@ const Profile = () => {
               a good team-player. However, you can count on me as one man army
               if duty calls.
             </p>
-            <div className="text-[2.4em] mob:text-[1.6em] flex w-fit mt-[1em]">
+            <div
+              className="text-[2.4em] mob:text-[1.6em] flex w-fit mt-[1em]"
+              id="talk"
+            >
               <AnchorLink className="text-graybg hover:text-white cursor-pointer flex justify-center items-center bg-gradient-blue rounded-l-lg px-[0.6em] font-semibold py-[0.1em] text-center">
                 Contact Me
               </AnchorLink>
