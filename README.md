@@ -55,7 +55,7 @@ Instal package
 Run following commands:
 
 ```sh
-npn start
+npm start
 ```
 
 #
