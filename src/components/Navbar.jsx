@@ -35,13 +35,13 @@ const Navbar = (props) => {
     >
       <div className="flex justify-between items-center w-5/6 ">
         <div>
-          <Link href="#">
+          <a href="#">
             <img
               src={logo}
               alt=""
               className={`w-[10em] hover:pb-[2em] cursor-pointer ${logoAnimation}`}
             />
-          </Link>
+          </a>
         </div>
         {isAboveSmallScreens ? (
           <div className="flex gap-[3em] text-[1.6em] font-semibold">
