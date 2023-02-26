@@ -1,7 +1,7 @@
 import moviesProjectImg from "./assets/moviesProject.jpg";
 import registrationProjectImg from "./assets/registrationProject.jpg";
 import registrationProjectImg2 from "./assets/registrationProject2.jpg";
-import toDoListProjectImg from "./assets/ToDoListProject.jpg";
+import toDoListProjectImg from "./assets/toDoListProject.jpg";
 import portfolioProjectImg from "./assets/portfolioProject.png";
 import netflixImg from "./assets/netflix.jpg";
 
