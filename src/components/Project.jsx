@@ -35,7 +35,7 @@ const Project = ({
             className="w-[50em] hover:scale-[1.1] transition-all duration-[1000] ease-in"
           />
         </div>
-        <div className="bg-graybgDarker w-[50em] md:h-auto h-[27.2em] shadow-4xl xs:w-[47em] mob:w-[80vw]">
+        <div className="bg-graybgDarker w-[50em] md:h-auto h-[27.2em] shadow-4xl z-10 xs:w-[47em] mob:w-[80vw]">
           <div
             className={`h-[33%] flex flex-col gap-[2em]  ${
               imgOrder === 2
@@ -51,7 +51,7 @@ const Project = ({
             </p>
           </div>
           <div
-            className={`bg-darkestblue flex items-center h-[34%] text-[1.6em] mob:text-[1em] text-textgray ${
+            className={`flex bg-slideBlue items-center h-[34%] text-[1.6em] mob:text-[1em] text-textgray ${
               imgOrder === 2
                 ? "xs:justify-end xs:pr-[1em] xs:text-right mob:pl-[1em]"
                 : "pl-[1em]"

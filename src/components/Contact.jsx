@@ -23,7 +23,7 @@ const Contact = () => {
       >
         <div className="mb-4">
           <input
-            className="text-[1.6em] shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="text-[1.6em] shadow appearance-none  rounded w-full py-4 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-inputGray"
             id="username"
             type="text"
             placeholder="Username"
@@ -33,7 +33,7 @@ const Contact = () => {
         </div>
         <div className="mb-4">
           <input
-            className=" text-[1.6em]  shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className=" text-[1.6em]  shadow appearance-none  rounded w-full py-4 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-inputGray"
             id="email"
             type="email"
             placeholder="Email"
@@ -43,7 +43,7 @@ const Contact = () => {
         </div>
         <div className="mb-4">
           <textarea
-            className=" text-[1.6em]  shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className=" text-[1.6em]  shadow appearance-none bg-inputGray rounded w-full py-4 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
             id="message"
             rows="6"
             name="textarea"

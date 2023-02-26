@@ -41,6 +41,8 @@ module.exports = {
         black: "#000000",
         darkestblue: "#10213f",
         textgray: "#8891b0",
+        slideBlue: "#082037",
+        inputGray: "#2C3E50",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
