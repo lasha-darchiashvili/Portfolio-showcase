@@ -74,18 +74,18 @@ const projectsData = [
     },
     imgOrder: 1,
   },
-  {
-    img: moviesProjectImg,
-    header: "Frontend",
-    name: "Movies App",
-    description: <MoviesText />,
-    skills: ["JavaScript", "HTML", "CSS"],
-    links: {
-      github: "https://github.com/lasha-darchiashvili/Movie-App",
-      live: "https://lasha-darchiashvili.github.io/Movie-App/",
-    },
-    imgOrder: 2,
-  },
+  // {
+  //   img: moviesProjectImg,
+  //   header: "Frontend",
+  //   name: "Movies App",
+  //   description: <MoviesText />,
+  //   skills: ["JavaScript", "HTML", "CSS"],
+  //   links: {
+  //     github: "https://github.com/lasha-darchiashvili/Movie-App",
+  //     live: "https://lasha-darchiashvili.github.io/Movie-App/",
+  //   },
+  //   imgOrder: 2,
+  // },
 ];
 
 export default projectsData;
