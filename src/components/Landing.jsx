@@ -13,8 +13,8 @@ const Landing = () => {
         </div>
         <div className=" py-[2em] px-[4em] animate-headerAppears delay-[8000ms] invisible text-center">
           <p className="mob:text-[1.2em] sm:text-[4.8em] xs:text-[2.4em] text-white">
-            I'm Front-end <span className="text-emerald-500">&lt;Web&gt;</span>{" "}
-            Developer
+            Feel free to check my{" "}
+            <span className="text-emerald-500">&lt;Portfolio&gt;</span> here
           </p>
         </div>
       </div>
